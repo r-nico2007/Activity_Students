@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,5 +19,23 @@ namespace _10_
             Estrato = estrato;
             ValorCredito = valorCredito;
         }
+        public void CalcularCostoMatricula()
+            {
+            double costo = 0;
+            if (Creditos <= 20)
+            {
+
+                costo = Creditos * ValorCredito;
+
+            }
+            else
+            {
+
+                costo = (20 * ValorCredito) + ((Creditos - 20) * ValorCredito * 2);
+
+            }
+        }
+           
+        
     }
 }
