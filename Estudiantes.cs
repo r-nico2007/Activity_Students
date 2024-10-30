@@ -19,7 +19,7 @@ namespace _10_
             Estrato = estrato;
             ValorCredito = valorCredito;
         }
-        public void CalcularCostoMatricula()
+        public double CalcularCostoMatricula()
         {
             double costo = 0;
             if (Creditos <= 20)
@@ -49,6 +49,20 @@ namespace _10_
                 descuento = 0.30;
             }
             return costo * (1 - descuento);
+            }
+        public double CalcularSubsidio()
+        {
+            if (Estrato == 1)
+            {
+                return 200000;
+            }
+            else if (Estrato == 2)
+            {
+                return 100000;
+            }
+            return 0;
         }
+
+    }
     }
 }
