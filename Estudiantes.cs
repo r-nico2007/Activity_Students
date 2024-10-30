@@ -20,36 +20,35 @@ namespace _10_
             ValorCredito = valorCredito;
         }
         public void CalcularCostoMatricula()
-            {
+        {
             double costo = 0;
             if (Creditos <= 20)
-                {
+            {
 
                 costo = Creditos * ValorCredito;
 
-                }
+            }
             else
-                {
+            {
 
                 costo = (20 * ValorCredito) + ((Creditos - 20) * ValorCredito * 2);
 
-                }
+            }
 
             double descuento = 0;
             if (Estrato == 1)
-                {
+            {
                 descuento = 0.80;
-                }
+            }
             else if (Estrato == 2)
-                {
+            {
                 descuento = 0.50;
-                }
+            }
             else if (Estrato == 3)
-                {
+            {
                 descuento = 0.30;
-                }
+            }
+            return costo * (1 - descuento);
         }
-           
-        
     }
 }
