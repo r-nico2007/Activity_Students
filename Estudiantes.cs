@@ -62,7 +62,11 @@ namespace _10_
             }
             return 0;
         }
+        public void MostrarInformacion()
+        {
+            Console.WriteLine($"Costo de la matrícula: ${CalcularCostoMatricula():0.00}");
+            Console.WriteLine($"Subsidio: ${CalcularSubsidio():0.00}");
+        }
 
-    }
     }
 }
