@@ -20,6 +20,12 @@ public class Program
                 Estudiantes estudiantes = new Estudiantes(créditos, estrato, valorcredito);
                 estudiantes.MostrarInformacion();
 
+                Console.Write("¿Desea calcular la matrícula de otro estudiante? (s/n): ");
+                string continuar = Console.ReadLine().Trim().ToLower();
+                if (continuar != "s")
+                {
+                    break;
+                }
             }
         }
     }
